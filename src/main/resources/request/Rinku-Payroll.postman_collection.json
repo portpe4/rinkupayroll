@@ -1,0 +1,330 @@
+{
+	"info": {
+		"_postman_id": "5b9d7716-34b5-4249-ac5a-90dad0ca9b42",
+		"name": "Rinku-Payroll",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Empleados",
+			"item": [
+				{
+					"name": "Crear Empleado",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numeroEmpleado\": 1,\r\n    \"primerNombre\": \"BENITO\",\r\n    \"segundoNombre\": \"PABLO\",\r\n    \"primerApellido\": \"JUAREZ\",\r\n    \"segundoApellido\": \"GARCIA\",\r\n    \"idRol\": 1,\r\n    \"tipoEmpleado\": \"INTERNO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/rinku/v1/empleados",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"rinku",
+								"v1",
+								"empleados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Empleado",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/rinku/v1/empleados/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"rinku",
+								"v1",
+								"empleados",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Empleados",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/rinku/v1/empleados",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"rinku",
+								"v1",
+								"empleados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Empleado",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"numeroEmpleado\": 1,\r\n    \"primerNombre\": \"BENITO\",\r\n    \"segundoNombre\": \"PABLO\",\r\n    \"primerApellido\": \"JUAREZ\",\r\n    \"segundoApellido\": \"GARCIA\",\r\n    \"idRol\": 2,\r\n    \"tipoEmpleado\": \"EXTERNO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/rinku/v1/empleados/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"rinku",
+								"v1",
+								"empleados",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Empleado",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/rinku/v1/empleados/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"rinku",
+								"v1",
+								"empleados",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Movimientos",
+			"item": [
+				{
+					"name": "Crear Movimiento",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numeroEmpleado\": 1,\r\n    \"fechaCaptura\":\"2021-06-09\",\r\n    \"cantidadEntregas\": 10,\r\n    \"cubrioTurno\": true,\r\n    \"rolCubierto\": \"CHOFER\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/rinku/v1/movimientos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"rinku",
+								"v1",
+								"movimientos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Movimiento",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/rinku/v1/movimientos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"rinku",
+								"v1",
+								"movimientos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Movimientos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/rinku/v1/movimientos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"rinku",
+								"v1",
+								"movimientos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actuliazar Movimiento",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"id\": 1,\r\n        \"numeroEmpleado\": 1,\r\n        \"fechaCaptura\": \"2021-06-06\",\r\n        \"cantidadEntregas\": 5,\r\n        \"cubrioTurno\": false,\r\n        \"rolCubierto\": \"CARGADOR\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/rinku/v1/movimientos/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"rinku",
+								"v1",
+								"movimientos",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Movimiento",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/rinku/v1/movimientos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"rinku",
+								"v1",
+								"movimientos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Nomina",
+			"item": [
+				{
+					"name": "Generar Nomina",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/rinku/v1/nomina?numeroEmpleado=1&fechaInicial=2021-06-01&fechaFinal=2021-06-30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"rinku",
+								"v1",
+								"nomina"
+							],
+							"query": [
+								{
+									"key": "numeroEmpleado",
+									"value": "1"
+								},
+								{
+									"key": "fechaInicial",
+									"value": "2021-06-01"
+								},
+								{
+									"key": "fechaFinal",
+									"value": "2021-06-30"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "password",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "admin",
+				"type": "string"
+			}
+		]
+	},
+	"protocolProfileBehavior": {}
+}
